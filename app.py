@@ -1,6 +1,5 @@
 import streamlit as st
 import pandas as pd
-import plotly.express as px
 import plotly.graph_objects as go
 import time
 from src.sensor_simulator import generate_batch
@@ -28,6 +27,13 @@ if 'is_running' not in st.session_state:
     st.session_state.is_running = False
 if 'models_fitted' not in st.session_state:
     st.session_state.models_fitted = False
+if 'current_n_sensors' not in st.session_state:
+    st.session_state.current_n_sensors = n_sensors
+
+# Handle slider changes resetting models
+if st.session_state.current_n_sensors != n_sensors:
+    st.session_state.models_fitted = False
+    st.session_state.current_n_sensors = n_sensors
 
 col1, col2, col3 = st.columns(3)
 

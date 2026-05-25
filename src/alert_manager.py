@@ -1,8 +1,13 @@
+import os
 import pandas as pd
 from typing import List, Dict
 
 # In-memory store for alerts
 _alert_log: List[Dict] = []
+
+# Alert thresholds from env or defaults
+HIGH_THRESHOLD = float(os.environ.get("ALERT_THRESHOLD_HIGH", 0.8))
+MEDIUM_THRESHOLD = float(os.environ.get("ALERT_THRESHOLD_MEDIUM", 0.6))
 
 def check_and_alert(df: pd.DataFrame) -> List[Dict]:
     """
@@ -25,9 +30,9 @@ def check_and_alert(df: pd.DataFrame) -> List[Dict]:
         # But we negated them in anomaly_detector, so they are positive now.
         # Let's say baseline normal score is around 0.3-0.5.
         # Anomalies might have scores > 0.6.
-        if score > 0.8:
+        if score > HIGH_THRESHOLD:
             severity = "HIGH"
-        elif score > 0.6:
+        elif score > MEDIUM_THRESHOLD:
             severity = "MEDIUM"
         else:
             severity = "LOW"
