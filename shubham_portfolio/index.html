@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Portfolio von Shubham Jayswal - Spezialisiert auf industrielle KI-Automatisierung & lokale RAG-Lösungen. Mechatronik-Student an der RWTH Aachen.">
+    <title>Shubham Jayswal | KI-Automatisierung & RAG-Lösungen</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="particle-container"></div>
+
+    <nav class="glass-nav">
+        <div class="logo">SJ</div>
+        <ul class="nav-links">
+            <li><a href="#about" class="nav-link active">Über mich</a></li>
+            <li><a href="#projects" class="nav-link">Projekte</a></li>
+            <li><a href="#services" class="nav-link">Services</a></li>
+            <li><a href="#loi" class="nav-link">LOI Generator</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <section id="about" class="tab-content active">
+            <div class="glass-card profile-card">
+                <div class="status-badge">
+                    <span class="pulse-dot"></span>
+                    Spezialisiert auf industrielle KI-Automatisierung & lokale RAG-Lösungen
+                </div>
+                <h1 class="glow-text">Shubham Jayswal</h1>
+                <h2 class="subtitle">Mechatronik-Student @ RWTH Aachen</h2>
+                <p class="bio">
+                    Ich löse mechatronische und mathematische Probleme durch <strong>autonome KI-Agent-Pipelines</strong>,
+                    <strong>interaktive Streamlit-Dashboards</strong> und <strong>kybernetische Simulationen</strong>.
+                </p>
+                <div class="tech-stack">
+                    <span class="tech-tag">Python</span>
+                    <span class="tech-tag">Streamlit</span>
+                    <span class="tech-tag">Machine Learning</span>
+                    <span class="tech-tag">RAG</span>
+                    <span class="tech-tag">React</span>
+                    <span class="tech-tag">RL (Stable-Baselines3)</span>
+                </div>
+            </div>
+        </section>
+
+        <section id="projects" class="tab-content">
+            <h2 class="section-title">Projekte</h2>
+            <div class="project-grid">
+                <div class="glass-card project-card">
+                    <h3>QuantumCFO</h3>
+                    <p class="tag">Streamlit & Finance</p>
+                    <p>Interaktives High-End-Dashboard für Finanzplanung und Liquiditätssimulation.</p>
+                </div>
+
+                <div class="glass-card project-card">
+                    <h3>CRYPTO_HFT</h3>
+                    <p class="tag">Quantitative Finance</p>
+                    <p>Modulares Hochfrequenz-Handelssystem mit Order-Book-Imbalance (OBI) Bias-Modellen und Backtesting.</p>
+                </div>
+
+                <div class="glass-card project-card">
+                    <h3>Oekolopoly Simulation</h3>
+                    <p class="tag">Reinforcement Learning</p>
+                    <p>RL-Modellierung komplexer ökologischer und ökonomischer Feedback-Systeme (Gymnasium, Stable-Baselines3).</p>
+                </div>
+
+                <div class="glass-card project-card">
+                    <h3>DeepMindMap</h3>
+                    <p class="tag">React/Vite & D3.js</p>
+                    <p>Interaktive Mind-Maps zur Visualisierung komplexer relationaler Vorlesungs- und Projektinhalte.</p>
+                </div>
+
+                <div class="glass-card project-card">
+                    <h3>Bewerbung_Tools</h3>
+                    <p class="tag">Python & Gemini API</p>
+                    <p>Automatisierte Pipeline zur PDF-Stellenanalyse und Anschreiben-Erstellung auf C1/C2-Niveau.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="services" class="tab-content">
+            <h2 class="section-title">Freelance-Services</h2>
+            <div class="services-container">
+                <div class="glass-card service-card">
+                    <div class="icon">🤖</div>
+                    <h3>Automatisierung von Büroprozessen</h3>
+                    <p>Implementierung von KI-Agents und automatisierter PDF-Verarbeitung zur Optimierung Ihrer Workflows.</p>
+                </div>
+                <div class="glass-card service-card">
+                    <div class="icon">📊</div>
+                    <h3>Interaktive Dashboards</h3>
+                    <p>Professionelle Streamlit-Entwicklung für datengetriebene Entscheidungen und Visualisierungen.</p>
+                </div>
+                <div class="glass-card service-card">
+                    <div class="icon">⚙️</div>
+                    <h3>Technische Simulation & Skripting</h3>
+                    <p>Entwicklung von mathematischen Modellen und Regelungskonzepten für komplexe Systeme.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="loi" class="tab-content">
+            <div class="glass-card loi-card">
+                <h2 class="section-title">Letter of Intent (LOI) Generator</h2>
+                <p class="loi-desc">
+                    Generieren Sie ein rechtssicheres Dokument für die Ausländerbehörde Aachen (gemäß § 21 Abs. 6 AufenthG)
+                    zur Genehmigung der Freiberuflichkeit im Studium.
+                </p>
+
+                <form id="loi-form" class="glass-form">
+                    <div class="form-group">
+                        <label for="clientName">Name des Auftraggebers / Unternehmens</label>
+                        <input type="text" id="clientName" required placeholder="Max Mustermann GmbH">
+                    </div>
+                    <div class="form-group">
+                        <label for="projectDesc">Projektbeschreibung</label>
+                        <textarea id="projectDesc" required placeholder="Entwicklung eines KI-gestützten Dashboards..." rows="3"></textarea>
+                    </div>
+                    <div class="form-group">
+                        <label for="duration">Voraussichtliche Dauer / Umfang</label>
+                        <input type="text" id="duration" required placeholder="z.B. 3 Monate, 10 Stunden/Woche">
+                    </div>
+                    <div class="form-group">
+                        <label for="budget">Geschätztes Budget / Vergütung (€)</label>
+                        <input type="text" id="budget" required placeholder="z.B. 3000€ oder 50€/Std">
+                    </div>
+
+                    <div class="button-group">
+                        <button type="button" class="btn primary-btn" onclick="generateLOI('de')">LOI Generieren (Deutsch)</button>
+                        <button type="button" class="btn secondary-btn" onclick="generateLOI('en')">Generate LOI (English)</button>
+                    </div>
+                </form>
+
+                <div id="loi-result" class="hidden">
+                    <h3>Generiertes Dokument</h3>
+                    <div class="document-preview" id="loi-content"></div>
+                    <button type="button" class="btn primary-btn" onclick="copyLOI()">Kopieren / Copy</button>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script src="app.js"></script>
+</body>
+</html>
